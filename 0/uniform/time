@@ -9,13 +9,22 @@ FoamFile
 {
     format      ascii;
     class       dictionary;
-    location    "system";
-    object      functions;
+    location    "0/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-// include packaged functionObjects using #includeFunc
-// #includeFunc
+beginTime       0;
 
-#includeFunc yPlus
+value           0;
+
+name            "0";
+
+index           0;
+
+deltaT          1;
+
+deltaT0         1;
+
+
 // ************************************************************************* //

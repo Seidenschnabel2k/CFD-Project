@@ -39,23 +39,24 @@ vertices
 );
 
 NegY (
-  (10 30 4)
-  (20 20 1)
-  (70 50 1)
+  (10 30 15)
+  (90 60 1)
 );
+
+Yres 150;
 
 blocks
 (
     hex ( 0 1 2 3 4 5 6 7)
-    (50 1 100)
+    (50 1 $Yres)
     simpleGrading (1 1 $NegY)
 
     hex (1 8 9 2 5 10 11 6)
-    (10 1 100)
+    (10 1 $Yres)
     simpleGrading (1 1 $NegY )
 
     hex (8 12 13 9 10 14 15 11)
-    (200 1 100)
+    (200 1 $Yres)
     simpleGrading (1 1 $NegY )
 
 );
