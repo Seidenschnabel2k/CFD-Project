@@ -39,7 +39,7 @@ vertices
 );
 
 NegY (
-  (10 30 15)
+  (10 40 15)
   (90 60 1)
 );
 
@@ -48,15 +48,15 @@ Yres 150;
 blocks
 (
     hex ( 0 1 2 3 4 5 6 7)
-    (50 1 $Yres)
+    ($xNet1 1 $yNet)
     simpleGrading (1 1 $NegY)
 
     hex (1 8 9 2 5 10 11 6)
-    (10 1 $Yres)
+    ($xNet2 1 $yNet)
     simpleGrading (1 1 $NegY )
 
     hex (8 12 13 9 10 14 15 11)
-    (200 1 $Yres)
+    ($xNet3 1 $yNet)
     simpleGrading (1 1 $NegY )
 
 );
