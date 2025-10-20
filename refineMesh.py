@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path
 
 
-mesh_step = [5, 8, 10, 12]
+mesh_step = [5, 8, 9, 10, 11, 12]
 
 
 async def main():
