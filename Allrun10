@@ -1,6 +1,11 @@
 #!/bin/sh
 cd ${0%/*} || exit 1 # Run from this directory
 
+export yNet=$(echo "12 * 15" | bc)
+export xNet1=$(echo "12  * 5" | bc)
+export xNet2=$(echo "12  * 1" | bc)
+export xNet3=$(echo "12 * 20" | bc)
+
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
@@ -11,5 +16,5 @@ runApplication foamRun &
 while [ ! -f postProcessing/residuals/0/residuals.dat ]; do
   sleep 1
 done
-foamMonitor -t $xNet2 -l postProcessing/residuals/0/residuals.dat
+foamMonitor postProcessing/residuals/0/residuals.dat
 #------------------------------------------------------------------------------
