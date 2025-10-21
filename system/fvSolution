@@ -19,7 +19,7 @@ solvers
     p
     {
         solver          GAMG;
-        tolerance       1e-06;
+        tolerance       1e-07;
         relTol          0.1;
         smoother        GaussSeidel;
     }
@@ -48,9 +48,9 @@ SIMPLE
 
     residualControl
     {
-        p               1e-2;
-        U               1e-3;
-        "(k|epsilon|omega|f|v2)" 1e-3;
+        p               1e-3;
+        U               1e-4;
+        "(k|epsilon|omega|f|v2)" 1e-4;
     }
 }
 

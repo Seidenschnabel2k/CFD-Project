@@ -1,8 +1,16 @@
+#!/usr/bin/env python
 import pyvista as pv
 import os
 import numpy as np
 pen = []
-for i in [5, 8, 9, 10, 11, 12]:
+folders = [d for d in os.listdir(
+    ".") if os.path.isdir(os.path.join(".", d))]
+dirs = []
+for i in folders:
+    dirs.append(int(i))
+
+dirs.sort()
+for i in dirs:
     root = f"{i}/postProcessing/streamlinesPoints/"
     num = 0
     for name in os.listdir(root):
@@ -15,7 +23,7 @@ for i in [5, 8, 9, 10, 11, 12]:
     ymax = y.max()
     pen.append(ymax)
 
-    print("case:", i, "time", num, "pen:", ymax)
+    print("case:", i, "iteration", num, "pen:", ymax)
 
 pen = np.array(pen)
-print(np.abs((pen[0:-2] / pen[1:-1])-1)*100, "%")
+print(np.abs((pen[:-1] / pen[1:])-1)*100, "%")
