@@ -16,7 +16,7 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0.375;
+internalField   uniform 1.5;
 
 boundaryField
 {
@@ -37,7 +37,7 @@ boundaryField
     lowerWall
     {
         type            kqRWallFunction;
-        value           uniform 0.375;
+        value           uniform 1.5;
     }
     frontAndBack
     {

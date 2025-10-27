@@ -4,20 +4,19 @@ import asyncio
 import shutil
 
 
-mesh_step = [7, 8, 9, 10, 11, 12, 13]
+mesh_step = [10, 11, 12, 13, 14 ,15 ]
 
 
 async def main():
     procs = []
     for i in mesh_step:
-        shutil.copytree("../CFD_Labor_Group1/",
+        shutil.copytree("../CFD-Project/",
                         f"{i}", dirs_exist_ok=True,
                         ignore=shutil.ignore_patterns('.git'))
-        xMul = .5
         os.environ['yNet'] = str(i * 19)
-        os.environ['xNet1'] = str(int(i * xMul * 5))
-        os.environ['xNet2'] = str(int(i * xMul * 1))
-        os.environ['xNet3'] = str(int(i * xMul * 20))
+        os.environ['xNet1'] = str(int(i * 5))
+        os.environ['xNet2'] = str(int(i * 1))
+        os.environ['xNet3'] = str(int(i * 20))
         p = await asyncio.create_subprocess_exec(f"{i}/Allrun")
         procs.append(p)
 

@@ -8,8 +8,8 @@ runApplication foamCleanCase
 runApplication blockMesh
 #runApplication refineMesh
 runApplication foamRun &
-while [ ! -f postProcessing/residuals/0/residuals.dat ]; do
-  sleep 1
-done
-foamMonitor -t $xNet2 -l postProcessing/residuals/0/residuals.dat
+#while [ ! -f postProcessing/residuals/0/residuals.dat ]; do
+#  sleep 1
+#done
+#foamMonitor -t $xNet2 -l postProcessing/residuals/0/residuals.dat
 #------------------------------------------------------------------------------
