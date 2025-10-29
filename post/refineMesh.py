@@ -4,13 +4,14 @@ import asyncio
 import shutil
 
 
-mesh_step = [10, 11, 12, 13, 14 ,15 ]
+# mesh_step = [14, 15, 18, 20]
+mesh_step = [12, 13]
 
 
 async def main():
     procs = []
     for i in mesh_step:
-        shutil.copytree("../CFD-Project/",
+        shutil.copytree("../CFD_Labor_Group1/",
                         f"{i}", dirs_exist_ok=True,
                         ignore=shutil.ignore_patterns('.git'))
         os.environ['yNet'] = str(i * 19)
