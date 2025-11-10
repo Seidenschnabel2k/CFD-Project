@@ -13,8 +13,8 @@ def find_N(ds, de, er, L):
     return n
 
 
-ds = .00728172785668116513
-i = 15
+ds = .0094
+i = 14
 de = 1/i
 er = de/ds
 n = find_N(ds, de, er, 1)
