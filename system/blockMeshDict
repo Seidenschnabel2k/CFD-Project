@@ -43,7 +43,7 @@ vertices
 );
 
 NegY (
-  (10 50 3)
+  (10 $wallNCell $wallER)
   (90 140 1)
 );
 
@@ -70,7 +70,7 @@ blocks
 
     hex (16 17 18 19 1 8 9 2)
     ($xNet2 1 50)
-    simpleGrading ($NegPosX 1 1)
+    simpleGrading ($NegPosX 1 .25)
 
 );
 boundary
