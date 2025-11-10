@@ -40,6 +40,10 @@ boundaryField
     {
         type            noSlip;
     }
+    inletwall
+    {
+        type            noSlip;
+    }
 
     frontAndBack
     {

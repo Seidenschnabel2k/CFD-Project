@@ -37,6 +37,11 @@ boundaryField
         type            fWallFunction;
         value           uniform 0;
     }
+    inletwall
+    {
+        type            fWallFunction;
+        value           uniform 0;
+    }
     frontAndBack
     {
         type            empty;

@@ -39,6 +39,10 @@ boundaryField
     {
         type            zeroGradient;
     }
+    inletwall
+    {
+        type            zeroGradient;
+    }
 
     frontAndBack
     {

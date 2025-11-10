@@ -39,6 +39,11 @@ boundaryField
         type            omegaWallFunction;
         value           $internalField;
     }
+    inletwall
+    {
+        type            omegaWallFunction;
+        value           $internalField;
+    }
     frontAndBack
     {
         type            empty;

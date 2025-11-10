@@ -39,6 +39,11 @@ boundaryField
         type            epsilonWallFunction;
         value           uniform 290.708672769873;
     }
+    inletwall
+    {
+        type            epsilonWallFunction;
+        value           uniform 290.708672769873;
+    }
     frontAndBack
     {
         type            empty;

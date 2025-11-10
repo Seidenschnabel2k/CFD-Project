@@ -3,7 +3,7 @@ cd ${0%/*} || exit 1 # Run from this directory
 
 export yNet=$(echo "12 * 19" | bc)
 export xNet1=$(echo "12  * 5" | bc)
-export xNet2=$(echo "12  * 1" | bc)
+export xNet2=$(echo "12  * 2" | bc)
 export xNet3=$(echo "12 * 20" | bc)
 
 # Source tutorial run functions

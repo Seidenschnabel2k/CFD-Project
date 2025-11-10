@@ -39,6 +39,11 @@ boundaryField
         type            v2WallFunction;
         value           $internalField;
     }
+    inletwall
+    {
+        type            v2WallFunction;
+        value           $internalField;
+    }
     frontAndBack
     {
         type            empty;
