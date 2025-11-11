@@ -43,16 +43,15 @@ vertices
 );
 
 NegY (
-  (10 $wallNCell $wallER)
-  (90 140 1)
+  (1 $wallNCell $wallER) // fractionOfArea fractionOfCell grothRate 
+  (14 140 1)
 );
 
 NegPosX (
-  (20 1 2)
-  (60 2 1)
-  (20 1 .5)
+  (2 1 $wallER)
+  (6 2 1)
+  (2 1 $wallER_inv)
 );
-Yres 150;
 
 blocks
 (
