@@ -22,12 +22,16 @@ ni = find_N(ds, de, er, .2)
 
 
 os.environ['yNet'] = str(i * 14 + n)
+os.environ['NYCore'] = str(i * 14)
+os.environ['NXCore'] = str(int(i * .6))
 os.environ['xNet1'] = str(i * 5)
 os.environ['xNet2'] = str(int(i * .6)+ni*2)
-os.environ['xNet3'] = str(i * 20)
+os.environ['xNet3'] = str(i * 19+n)
+os.environ['xNet3Core'] = str(i * 19)
 os.environ['wallNCell'] = str(n)
 os.environ['wallER'] = str(er)
 os.environ['wallER_inv'] = str(1/er)
+os.environ['wallNiCell'] = str(ni)
 
 os.system("echo $xNet2")
 os.system("./Allrun")

@@ -44,13 +44,17 @@ vertices
 
 NegY (
   (1 $wallNCell $wallER) // fractionOfArea fractionOfCell grothRate 
-  (14 140 1)
+  (14 $NYCore 1)
 );
 
 NegPosX (
-  (2 1 $wallER)
-  (6 2 1)
-  (2 1 $wallER_inv)
+  (2 $wallNiCell $wallER)
+  (6 $NXCore 1)
+  (2 $wallNiCell $wallER_inv)
+);
+NegX (
+  (1 $wallNCell $wallER)
+  (19 $xNet3Core 1)
 );
 
 blocks
@@ -65,11 +69,14 @@ blocks
 
     hex (8 12 13 9 10 14 15 11)
     ($xNet3 1 $yNet)
-    simpleGrading (1 1 $NegY )
+    simpleGrading ($NegX 1 $NegY )
 
     hex (16 17 18 19 1 8 9 2)
     ($xNet2 1 50)
-    simpleGrading ($NegPosX 1 .25)
+    simpleGrading ($NegPosX 1 (
+    (4 40 1)
+    (1 $wallNCell $wallER_inv)
+    ))
 
 );
 boundary
