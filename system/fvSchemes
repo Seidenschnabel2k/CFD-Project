@@ -28,7 +28,8 @@ gradSchemes
 divSchemes
 {
     default         none;
-    div(phi,U)      bounded Gauss linearUpwind grad(U);
+    //div(phi,U)      bounded Gauss linearUpwind grad(U);
+    div(phi,U)      Gauss upwind;
     div(phi,k)      bounded Gauss limitedLinear 1;
     div(phi,epsilon) bounded Gauss limitedLinear 1;
     div(phi,omega)  bounded Gauss limitedLinear 1;

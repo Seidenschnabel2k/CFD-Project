@@ -7,7 +7,7 @@ cd ${0%/*} || exit 1 # Run from this directory
 runApplication foamCleanCase
 runApplication blockMesh
 #runApplication refineMesh
-runApplication foamRun
+runApplication foamRun &
 #while [ ! -f postProcessing/residuals/0/residuals.dat ]; do
 #  sleep 1
 #done

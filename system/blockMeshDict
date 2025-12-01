@@ -56,12 +56,16 @@ NegX (
   (1 $wallNCell $wallER)
   (19 $xNet3Core 1)
 );
+PosX (
+  (5 $xNet1Core 1)
+  (1 $wallNCell $wallER_inv)
+);
 
 blocks
 (
     hex ( 0 1 2 3 4 5 6 7)
     ($xNet1 1 $yNet)
-    simpleGrading (1 1 $NegY)
+    simpleGrading ($PosX 1 $NegY)
 
     hex (1 8 9 2 5 10 11 6)
     ($xNet2 1 $yNet)
@@ -72,9 +76,9 @@ blocks
     simpleGrading ($NegX 1 $NegY )
 
     hex (16 17 18 19 1 8 9 2)
-    ($xNet2 1 50)
+    ($xNet2 1 $nyInlet)
     simpleGrading ($NegPosX 1 (
-    (4 40 1)
+    (4 $coreInlet 1)
     (1 $wallNCell $wallER_inv)
     ))
 

@@ -18,11 +18,12 @@ simulationType RAS;
 RAS {
   // Tested with kEpsilon, realizableKE, kOmega, kOmega2006, kOmegaSST, v2f,
   // ShihQuadraticKE, LienCubicKE.
-  model kEpsilon;
+  model $model;
 
   turbulence on;
 
   viscosityModel Newtonian;
+
 }
 
 // ************************************************************************* //

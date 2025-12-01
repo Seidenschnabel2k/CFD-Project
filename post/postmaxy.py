@@ -26,7 +26,7 @@ for i in dirs:
     ymax = y.max()
 
     print("case:", i, "iteration:", num, "max y value:",
-          ymax, "change:", (ymax/pen[-1] - 1)*100, "%")
+          f"{ymax:.06f}", "change:", f"{(ymax/pen[-1] - 1)*100:.06f}", "%")
     pen.append(ymax)
 
 pen = np.array(pen)

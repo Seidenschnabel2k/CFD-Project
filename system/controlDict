@@ -22,7 +22,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         4000;
+endTime         8000;
 
 deltaT          1;
 
@@ -43,5 +43,8 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
+
+libs ("libmyincompressibleMomentumTransportModels.so");
+
 
 // ************************************************************************* //

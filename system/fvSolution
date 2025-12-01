@@ -48,10 +48,11 @@ SIMPLE
 
     residualControl
     {
-        p               5e-4;
+        //p               5e-4;
         epsilon         1e-4;
         U               1e-5;
-        "(k|f|v2)" 1e-5;
+        k               1e-4;
+        //"(k|f|v2)" 1e-5;
     }
 }
 
